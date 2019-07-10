@@ -13,10 +13,10 @@ namespace CustomKenticoAPI
         }
 
         [HttpGet]
-        public HttpResponseMessage Test(int id = 100)
+        public HttpResponseMessage Test(int id = 100, string name = "Default")
         {
             // You can return a variety of things in Web API controller actions. For more details, see http://www.asp.net/web-api/overview/getting-started-with-aspnet-web-api/action-results
-            return Request.CreateResponse(HttpStatusCode.OK, new { Data = "test data", ID = id });
+            return Request.CreateResponse(HttpStatusCode.OK, new { ID = id, Name = name });
         }
     }
 }
